@@ -41,6 +41,17 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
 
+  @media screen and (max-width:550px) {
+
+    #drawerHead.side-open{
+     
+    
+      width:15%;
+     
+    }
+    
+  }
+
   #drawerHead.side-close{
     position: fixed;
     left:0px;
@@ -51,9 +62,12 @@
   }
 
  .menu-item{
-  width: 50%;
+  width: 100%;
   vertical-align: middle;
   display: inline-block;
+  min-width: 0 !important;
+  padding: 0 0 !important;
+
  
  }
 
@@ -63,14 +77,15 @@
   }
 
   ::ng-deep {
-    .mat-list-item{
-      padding:0px 0px;
+    .mat-list-item-content{
+      padding:0px 0px !important;
     }
   }
 
   .side-panel > .mat-list-item {
     width: 100%;
     display: inline-block;
+    padding: 0 0;
   }
-
+  
 

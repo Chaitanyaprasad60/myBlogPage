@@ -48,3 +48,27 @@
    text-align: center;
    
 }
+
+
+@media screen and (max-width: 550px){
+
+    #intro{      
+        width: 80%;
+        text-align: left;
+    }
+
+    #coverImage {
+        width: 80%;
+     }
+
+     #opening{
+        display: block;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+     
+
+
+}
