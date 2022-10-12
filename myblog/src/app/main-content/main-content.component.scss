@@ -1,0 +1,74 @@
+#coverImage {
+   margin: auto;
+   display: inline-block;
+   margin: 0 5px;
+   width: 50%;
+   vertical-align: middle;
+}
+
+.Parent{
+
+    display: inline-block;
+    margin: 20px 10px ;
+   border: 2px solid;
+   background-color: antiquewhite;
+   color:black;
+}
+
+#title{
+ display: inline-block;
+ text-align: center;
+ width: 100%;
+
+}
+
+#intro{
+    display: inline-block;
+    width: 35%;
+    margin: 0 5px;
+}
+
+#opening{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#blogContent > p{
+    width: 100%;
+    display: inline-block;
+    text-align: justify;
+
+}
+
+#blogContent {
+    width: 90%;
+    display: inline-block;
+    margin: 4px 10px;
+   text-align: center;
+   
+}
+
+
+@media screen and (max-width: 550px){
+
+    #intro{      
+        width: 80%;
+        text-align: left;
+    }
+
+    #coverImage {
+        width: 80%;
+     }
+
+     #opening{
+        display: block;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+     
+
+
+}
