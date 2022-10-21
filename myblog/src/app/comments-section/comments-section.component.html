@@ -1,4 +1,28 @@
-<p>comments-section Still under progress</p>
-<button [routerLink]="['']">
-    Go back to home
-</button>
+<div>
+
+
+<!-- for in label -- The id of the element the label is bound to -->
+<!-- Form to post comments --> 
+<form id="form" [formGroup]="profileForm">
+
+    <input id="comment" type="text" placeholder="Add Comment" formControlName="comment">
+    
+    <div id="author">
+        <label for="comment">Your Name: </label>
+        <input id="author-input" type="text" formControlName="author">    
+    </div>
+   
+    <button id="postButton" mat-flat-button (click)="postComment()">Post</button>
+  
+</form>
+
+<h2 style="margin: 0 ;">Comments</h2>
+<!-- List to diplay comments-->
+<ul id="displayComments">
+    <li *ngFor="let comment of comments">
+        <p id="author"> {{comment.author}} </p>  
+        <p id="data"> {{comment.body}}   </p>        
+    </li>
+</ul>
+
+</div>

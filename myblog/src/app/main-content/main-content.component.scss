@@ -7,7 +7,6 @@
 }
 
 .Parent{
-
     display: inline-block;
     margin: 20px 10px ;
    border: 2px solid;
@@ -16,10 +15,23 @@
 }
 
 #title{
- display: inline-block;
- text-align: center;
  width: 100%;
+ display: inline-block;
+ 
 
+}
+#title > #heading {
+    display: inline-block;   
+    position: relative;
+    text-align: center;
+    width:90%;
+}
+
+#title > #views {
+   display: inline;
+   position: relative;
+   float: right;
+   right:4%
 }
 
 #intro{
@@ -66,6 +78,10 @@
         width: 100%;
         align-items: center;
         text-align: center;
+    }
+
+    #title > #heading {
+        margin: 0 0;
     }
     
      

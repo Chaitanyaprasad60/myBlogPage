@@ -9,6 +9,9 @@ import { MaterialsModule } from './materials/materials.module';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { CommentsSectionComponent } from './comments-section/comments-section.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { CommentsSectionComponent } from './comments-section/comments-section.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialsModule
+    MaterialsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
