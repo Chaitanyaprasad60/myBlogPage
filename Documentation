@@ -1,0 +1,25 @@
+
+#Version 2 
+1. Build on local 
+2. Test on local
+3. Deploy on heroku 
+
+1. Build on local 
+
+ -- Backend APIS needed
+ 1. Blog View Count get and update (blogId,blogViewCount)
+ 2. Get Blog with id - (blogId,content)
+ 3. Get Comments - (blogId,CommentBody, commentAddedBy, comment added date,commentId Primary key)
+ 4. Add comment to comments Table 
+ 5. Subscribers list (userId,SubcriberEmail)
+
+ --Node JS App Architecture 
+ Microservice Index File > Routes > Controllers > Model File -- Logic in this 
+
+
+Blog to deploy front end and backend on same heroku app.
+
+https://medium.com/@chloechong.us/how-to-deploy-a-create-react-app-with-an-express-backend-to-heroku-32decfee6d18
+
+git repo - https://github.com/minichloe/crae-example
+Mysql with nodeJS -- https://www.bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/

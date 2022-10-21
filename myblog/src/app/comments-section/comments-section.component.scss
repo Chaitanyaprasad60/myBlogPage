@@ -1,0 +1,53 @@
+#postButton {
+    background-color: rgb(120, 85, 247);
+    color: while;
+    display: block;
+    float: right;
+    position: relative;
+    right: 2.5%;
+   
+}
+
+#form {
+    display: inline-block;
+    width: 90%;
+    border: solid black;
+    background-color: grey;
+    border-radius: 15px;
+    text-align: center;
+    padding: 7px;
+   
+}
+
+#comment{
+    width: 95%;
+    height: 40px;
+}
+
+#author{
+    margin: 6px 0px;
+    width: 100%;
+}
+
+#author-input{
+    width: 50%;
+}
+
+#displayComments > li{
+    list-style:none;
+    margin: 2px;
+}
+
+#displayComments{
+    background-color: black;
+    display: inline-block;
+    width: 90%;
+}
+
+#author {
+    font-size: 1em;
+}
+
+#data {
+    font-size: 2em;
+}
