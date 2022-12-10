@@ -8,7 +8,7 @@
 
  -- Backend APIS needed
  1. Blog View Count get and update (blogId,blogViewCount)
- 2. Get Blog with id - (blogId,content)
+ 2. Get Blog with id - (blogId,title,imagePath,logoPath,body)
  3. Get Comments - (blogId,CommentBody, commentAddedBy, comment added date,commentId Primary key)
  4. Add comment to comments Table 
  5. Subscribers list (userId,SubcriberEmail)

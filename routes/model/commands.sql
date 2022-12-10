@@ -5,9 +5,9 @@
  -- View Count table create command
 
  create table view_count(
-                        blogId int NOT NULL,
+                        blogId int NOT NULL UNIQUE,
                         viewCount int default(0),
-                        PRIMARY KEY (blogId)
+                        FOREIGN KEY (blogId) REFERENCES blog(blogId)
                         );
 
 CREATE TABLE `comments` (
@@ -26,12 +26,19 @@ FLUSH PRIVILEGES;
 use myblog;
 DELIMITER //
 DROP PROCEDURE IF EXISTS addAndGetViews//
-CREATE PROCEDURE addAndGetViews(IN blog INT)
+CREATE PROCEDURE addAndGetViews(IN _blogId INT)
   BEGIN
-    UPDATE view_count SET viewCount = viewCount + 1 WHERE blogId = blog;
-    SELECT viewCount from view_count WHERE blogId =  blog;
+    INSERT INTO view_count(blogId,viewCount) values(_blogId,1) ON DUPLICATE KEY UPDATE viewCount = viewCount + 1;
+    SELECT viewCount from view_count WHERE blogId =  _blogId;
 END //
+;
 
- update view_count vc set vc.viewCount = vc.viewCount + 1 where blogId = ${req.body.blogId}; select vc.viewCount from view_count vc where vc.blogId = ${req.body.blogId};
-
-                        
+use myblog;
+CREATE TABLE blog (
+	blogId INT NOT NULL auto_increment,
+    title text,
+    body text,
+    imagePath text,
+    logoPath text, 
+    primary key (blogId)
+    );              

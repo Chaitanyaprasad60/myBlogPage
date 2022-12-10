@@ -11,6 +11,11 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { CommentsSectionComponent } from './comments-section/comments-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ResumeComponent } from './resume/resume.component';
+import { CoreModule } from './core/core.module';
+import { EditorComponent } from './editor/editor.component';
+import { Demo1Component } from './demo1/demo1.component';
+
 
 
 @NgModule({
@@ -19,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SideBarComponent,
     MainContentComponent,
-    CommentsSectionComponent
+    CommentsSectionComponent,
+    ResumeComponent,
+    EditorComponent,
+    Demo1Component
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,90 +1,119 @@
 #coverImage {
-   margin: auto;
-   display: inline-block;
-   margin: 0 5px;
-   width: 50%;
-   vertical-align: middle;
-}
-
-.Parent{
+    margin: auto;
     display: inline-block;
-    margin: 20px 10px ;
-   border: 2px solid;
-   background-color: antiquewhite;
-   color:black;
-}
-
-#title{
- width: 100%;
- display: inline-block;
- 
-
-}
-#title > #heading {
-    display: inline-block;   
-    position: relative;
-    text-align: center;
-    width:90%;
-}
-
-#title > #views {
-   display: inline;
-   position: relative;
-   float: right;
-   right:4%
-}
-
-#intro{
-    display: inline-block;
-    width: 35%;
     margin: 0 5px;
+    width: 90%;
+    vertical-align: middle;
 }
 
-#opening{
+.Parent {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    border: 2px solid;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    margin-left: auto;
+    background-color: #FEFCF3;
+}
+
+#title {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 5px 0;
+}
+
+#title>#heading {
+    display: inline-block;
+    position: relative;
+
+   
+}
+
+#infoBar{
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+    margin: 5px 0;
+}
+
+#views {
+    display: inline;
+    background-color: black;
+    padding: 5px 3px;
+    border-radius: 10px;
+    margin: 5px 10px ;
+  
+}
+
+#views > mat-icon {
+    height: 100%;
+    vertical-align: middle;
+    color: white;
+    margin: 2px 8px;
+}
+
+#views > h4 {
+    display: inline;
+    vertical-align: middle;
+    color: white;
+    margin:2px 2px;
+}
+
+
+
+#opening {
     display: flex;
     width: 100%;
     align-items: center;
 }
 
-#blogContent > p{
+#blogContent>p {
     width: 100%;
     display: inline-block;
     text-align: justify;
+    white-space: pre-wrap;
 
 }
 
 #blogContent {
     width: 90%;
     display: inline-block;
-    margin: 4px 10px;
-   text-align: center;
-   
+    margin: 24px 10px;
+    text-align: center;
+
+
+}
+
+#blogContent>textarea {
+    resize: none;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+#publishDate {
+   display: inline;
+}
+
+#share{
+    vertical-align: middle;
+    float: right;
 }
 
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 650px) {  
+   
 
-    #intro{      
-        width: 80%;
-        text-align: left;
-    }
-
-    #coverImage {
-        width: 80%;
-     }
-
-     #opening{
-        display: block;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    #title > #heading {
+    #title>#heading {
         margin: 0 0;
     }
-    
-     
+    #publishDate {
+        display: none;
+     }
 
 
 }

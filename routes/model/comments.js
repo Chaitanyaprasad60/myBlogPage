@@ -5,7 +5,7 @@ const Comments = function (comment) {
 };
 
 Comments.getComments = (req, res) => {
-    sql.query(`SELECT * FROM comments`,function(err,data){
+    sql.query(`SELECT * FROM comments where blogId = ?`,[req.body.blogId],function(err,data){
         if (err) {
             res.status(200).send("Error in fetching comment")
         }
@@ -18,16 +18,17 @@ Comments.getComments = (req, res) => {
 
 
 Comments.postComment = (req, res) => {
-
-    console.log(req.body)
-    sql.query(`INSERT INTO comments(body,author,addedDate,blogId) values('${req.body.comment.body}','${req.body.comment.author}',CURDATE(),0)`, function (err, data) {
+    sql.query(`INSERT INTO comments(body,author,addedDate,blogId) values('${req.body.comment.body}','${req.body.comment.author}',CURDATE(),${req.body.blogId})`, function (err, data) {
         try {
             console.log(err, data)
             if (err) {
                 res.status(200).send("Error in adding comment")
             }
             else{
-                res.status(200).send("Comment Added")
+                res.status(200).send({
+                    status: "success",
+                    response: "Comment Added"
+                })
             }
             
         }
@@ -38,14 +39,13 @@ Comments.postComment = (req, res) => {
 }
 
  Comments.addAndGetViews = (req,res) => {
-    console.log(req.body)
+    
     sql.query(`call addAndGetViews(${req.body.blogId});`,function(err,data){
         if(err){
             res.status(200).send({"status":"error",
                                     "message":-1})
         }
-        else{
-           
+        else{           
             res.status(200).send({"status":"success",
                                     "message":data[0][0].viewCount})
         }
