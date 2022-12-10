@@ -1,0 +1,35 @@
+<div class="page">
+    <div class="row">
+        <label>Write Area</label>
+        <textarea id="col" [(ngModel)]="writeArea" rows="6">
+           
+    </textarea>
+    <div class="col">
+        <button class="btn btn-primary">Hello</button>
+    </div>
+        <div class="readArea">
+            <label>white-space: pre</label>
+            <p class="style1">
+                {{writeArea}}
+            </p>
+            <div class="buttons">
+                <button class="btn btn-primary">Hello</button>
+            </div>
+
+        </div>
+        <div class="readArea">
+            <label>white-space: pre-wrap</label>
+            <p class="style2">
+                {{writeArea}}
+            </p>
+        </div>
+        <div class="readArea">
+            <label>white-space: pre-line</label>
+            <p class="style3">
+                {{writeArea}}
+            </p>
+        </div>
+
+
+    </div>
+</div>

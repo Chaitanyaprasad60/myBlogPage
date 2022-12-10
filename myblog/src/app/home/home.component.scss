@@ -1,0 +1,21 @@
+* {
+    width: 51%;
+    display: inline-block;
+    margin: 5px 25%;
+}
+
+app-comments-section {
+    background-color: #FEFCF3;
+    border: solid black 2px;
+
+}
+
+
+@media screen and (max-width: 550px){
+    * {
+        width: 98%;
+        display: inline-block;
+        margin: 5px 1%;
+    }
+
+}

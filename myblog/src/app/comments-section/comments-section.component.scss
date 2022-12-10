@@ -1,52 +1,65 @@
 #postButton {
     background-color: rgb(120, 85, 247);
-    color: while;
+    color: white;
     display: block;
     float: right;
     position: relative;
     right: 2.5%;
+    clear:both;
    
+}
+
+#commentsSection{
+    margin: 20px 10px;
 }
 
 #form {
     display: inline-block;
-    width: 90%;
-    border: solid black;
-    background-color: grey;
+    width: 100%;
+    border: solid black 2px;
+    background-color: #F5EBE0;
     border-radius: 15px;
-    text-align: center;
     padding: 7px;
-   
 }
 
 #comment{
-    width: 95%;
+    width: 90%;
     height: 40px;
+    border-radius: 5px;
+    margin: 4px 0px;
+    border: none;
+ 
 }
 
-#author{
-    margin: 6px 0px;
-    width: 100%;
-}
+
 
 #author-input{
     width: 50%;
-}
-
-#displayComments > li{
-    list-style:none;
-    margin: 2px;
+    clear:both;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    border: none;
 }
 
 #displayComments{
-    background-color: black;
     display: inline-block;
-    width: 90%;
+    width: 100%;
+    padding: 0px;
 }
 
-#author {
-    font-size: 1em;
+#oneComment{
+    list-style:none;
+    border: solid black 1px;
+    background-color: #F5EBE0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    color:black
+
 }
+
 
 #data {
     font-size: 2em;
