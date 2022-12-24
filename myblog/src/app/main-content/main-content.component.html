@@ -1,0 +1,26 @@
+<div class="Parent">
+    <div class="blogBackground">
+        <div  id="title"> 
+            <h1 id="heading" >{{title}} </h1>
+        </div>
+        <div id="infoBar">
+            <p id="publishDate">Published on December 10, 2022</p>
+            <div id="views">
+                <mat-icon>remove_red_eye</mat-icon> <h4>{{viewCount}}</h4>
+            </div>
+    
+            <mat-icon id="share" (click)="share()">share</mat-icon>
+            
+        </div>
+       
+
+        <img src="../../assets/coverImage.jpg" id="coverImage">
+    
+    
+        <div id="blogContent" >
+            <p>{{body}}</p>
+        </div>
+
+    </div>
+    
+</div>
