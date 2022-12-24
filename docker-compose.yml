@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nodejs-server:
+    container_name: node-api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  angular-ui:
+    container_name: angular-ui
+    build:
+      context: ./myblog
+      dockerfile: Dockerfile
+    ports:
+      - "443:4200"
+      - "80:4200"
+    
