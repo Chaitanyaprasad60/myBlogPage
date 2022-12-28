@@ -1,12 +1,20 @@
 const mysql = require('mysql');
+const config = require('../../config.json');
 
+let host = process.env.host || config.host; 
+let user = process.env.user || config.user; 
+let password = process.env.password || config.password; 
+let database = process.env.database || config.database; 
+let dbport = process.env.dbport || config.dbport; 
 
+console.log({host})
 var pool = mysql.createPool({
-    connectionLimit: 5,
-    host: 'localhost',
-    user: 'root',
-    password: 'password', 
-    database: 'myblog'
+    connectionLimit: 10,
+    host: host,
+    port:dbport,
+    user: user,
+    password: password, 
+    database: database
 });
 
 pool.getConnection(function(err) {
