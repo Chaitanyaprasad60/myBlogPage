@@ -52,6 +52,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
           });
 
           this.apiService.getBlog(blogId).pipe(takeUntil(this.destroy$)).subscribe((blogData) => {
+            console.log("Hii",blogData)
             if (blogData.status == "success"){
               this.title = blogData.response.title;
               this.body = blogData.response.body;
