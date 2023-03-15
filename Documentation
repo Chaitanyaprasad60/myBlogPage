@@ -1,4 +1,6 @@
   "@angular/cli": "^14.2.4",
+
+  "@angular/compiler": "~13.3.12",
 #Version 2 
 1. Build on local 
 2. Test on local

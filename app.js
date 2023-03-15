@@ -29,18 +29,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + 'myblog/build'));
+//app.use(express.static(__dirname + 'myblog/build'));
 
 //Backend Routes
-app.use('/backend', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/backend', indexRouter);
+app.use('/api/users', usersRouter);
 
 
 //All other routes which doesn't match these two. 
 app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'myblog/build/index.html'));
-});
+    console.log(req.body,req.path)
+// res.sendFile(path.join(__dirname+'myblog/build/index.html'));
+ });
 
 
 // catch 404 and forward to error handler

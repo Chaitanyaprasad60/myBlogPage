@@ -8,7 +8,9 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - prod.env
+      - local.env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   angular-ui:
     container_name: angular-ui
     build:
@@ -17,4 +19,6 @@ services:
     ports:
       - "443:443"
       - "80:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     
