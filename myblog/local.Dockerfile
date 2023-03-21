@@ -12,13 +12,13 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-RUN ng build --prod
+RUN ng build
 
 
 #stage 2
 FROM nginx:latest
 RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx/default.conf /etc/nginx/conf.d/
+COPY nginx/default_local.conf /etc/nginx/conf.d/
 
 COPY --from=builder /ng-app/dist/myblog /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

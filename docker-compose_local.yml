@@ -1,13 +1,5 @@
 version: '3'
-services:  
-  angular-ui:
-    container_name: angular-ui
-    build:
-      context: ./myblog
-      dockerfile: Dockerfile
-    ports:
-      - "443:443"
-      - "80:80"
+services:
   nodejs-server:
     container_name: node-api
     build:
@@ -17,4 +9,16 @@ services:
       - "3000:3000"
     env_file:
       - local.env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  angular-ui:
+    container_name: angular-ui
+    build:
+      context: ./myblog
+      dockerfile: local.Dockerfile
+    ports:
+      - "443:443"
+      - "80:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     
