@@ -12,7 +12,7 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-RUN ng build --prod
+RUN ng build 
 
 
 #stage 2

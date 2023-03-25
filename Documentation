@@ -25,3 +25,6 @@ https://medium.com/@chloechong.us/how-to-deploy-a-create-react-app-with-an-expre
 
 git repo - https://github.com/minichloe/crae-example
 Mysql with nodeJS -- https://www.bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/
+
+
+To run in local - docker-compose -f docker-compose_local.yml up --build -d
