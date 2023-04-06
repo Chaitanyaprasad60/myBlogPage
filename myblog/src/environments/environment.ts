@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backend:"http://localhost:443/api/backend"
+  backend:"http://host.docker.internal:443/api/backend"
 };
 
 /*
