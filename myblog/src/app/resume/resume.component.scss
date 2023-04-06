@@ -1,0 +1,40 @@
+
+
+#mid_section{  
+    display: inline-block;
+    height: 400px;
+    width : 100%;
+    text-align: center;
+   
+}
+
+.mid_section_inner1{
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+}
+
+.images {
+    width:100%;
+    vertical-align: middle;   
+    display: inline-block;
+   }
+   
+.images:hover {
+       position: relative;
+       bottom:10px;
+       left:10px;
+   }
+.skills{
+    width: 100%;
+    display: inline-block;
+    overflow: none;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+}
+
+#intro{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}

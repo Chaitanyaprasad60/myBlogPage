@@ -1,0 +1,71 @@
+.style1 {
+    white-space: pre;
+}
+
+.style2 {
+    white-space: pre-wrap;
+}
+
+.style3 {
+    white-space: pre-line;
+}
+
+.anywhere {
+    overflow-wrap: anywhere;
+}
+
+.breakWord {
+    overflow-wrap: break-word;
+}
+
+
+p {
+    margin: 0 0;
+    border: 3px solid black;
+    width: 80%;
+    height: 135px;
+    display: inline-block
+
+}
+
+.buttons{
+    width: 20%;
+    display: inline-block;
+    height: 135px;
+    margin: 0 5px;
+}
+
+.readArea {
+    display: inline-block;
+    margin: 3% 0;
+    width: 100%;
+
+}
+
+#writeArea {
+    display: inline-block;
+    clear: both;
+    width: 80%;
+    resize: none;
+}
+
+.mainClass {
+    width: 50%;
+    margin: auto 35px;
+    background-color: rgb(146, 168, 209);
+    height: 97 vh;
+    padding: 6px;
+}
+
+
+.page {
+    height: 100vh;
+    background-color: rgb(247, 202, 201);
+}
+
+label {
+    font-weight: bold;
+    color: black;
+    font-size: 22px
+}
+

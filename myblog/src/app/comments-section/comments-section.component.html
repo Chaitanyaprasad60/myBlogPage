@@ -1,0 +1,26 @@
+<div id="commentsSection">
+
+
+<!-- for in label -- The id of the element the label is bound to -->
+<!-- Form to post comments --> 
+<form id="form" [formGroup]="profileForm">
+
+    <input id="comment" type="text" placeholder="Add Comment" formControlName="comment">
+    <input id="author-input"  placeholder="Your name" type="text" formControlName="author">    
+  
+   
+    <button id="postButton" mat-flat-button (click)="postComment()">Post</button>
+  
+</form>
+
+<h2 style="margin: 0 ;">Comments</h2>
+
+<!-- List to diplay comments-->
+<ul id="displayComments">
+    <li *ngFor="let comment of comments" id="oneComment">
+        <p id="author"> {{comment.author}} </p>  
+        <p id="data"> {{comment.body}}   </p>        
+    </li>
+</ul>
+
+</div>
