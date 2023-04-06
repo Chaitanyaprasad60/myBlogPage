@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backend:"http://node-api:3000/backend"
+  backend:"https://54.174.217.94/api/backend"
 };

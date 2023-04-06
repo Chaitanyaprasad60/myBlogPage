@@ -1,18 +1,18 @@
 #stage 1
 FROM node:16-alpine as builder
-RUN mkdir /ng-app
-COPY package.json ./ng-app/
-WORKDIR /ng-app
+
+WORKDIR /ng-app 
+RUN npm install -g @angular/cli
+COPY ./package.json .
+
 
 ENV NODE_OPTIONS "--max-old-space-size=8192"
 
 RUN npm install --legacy-peer-deps
-RUN npm install -g @angular/cli
 
+COPY . .
 
-COPY . /ng-app
-
-RUN npm run build --prod
+RUN ng build 
 
 
 #stage 2
@@ -20,5 +20,6 @@ FROM nginx:latest
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/default.conf /etc/nginx/conf.d/
 
-COPY --from=builder /ng-app/dist/ /usr/share/nginx/html
+COPY --from=builder /ng-app/dist/myblog /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 443

@@ -1,0 +1,46 @@
+
+
+
+<mat-drawer-container  id="example-container" mode="side" [class.side-open]="isSideBarOpen" [class.side-close]="!isSideBarOpen" autosize>
+    <mat-drawer id="drawerHead" mode="side" [class.side-open]="isSideBarOpen" [class.side-close]="!isSideBarOpen" opened>
+        
+        <div class = "logo">
+            <img src="../.././assets/logo.jpg" >
+           
+        </div>
+       
+        
+        <mat-list class = "side-panel">     
+            
+            <mat-list-item>
+                <button class="menu-item" mat-flat-button [routerLink]="['home']">                   
+                        <mat-icon>home</mat-icon>                        
+                </button>                     
+              
+            </mat-list-item>
+            <mat-list-item>
+                <button class="menu-item" mat-flat-button [routerLink]="['comments']">
+                    <mat-icon>comment</mat-icon>
+                    
+                </button>                
+            </mat-list-item>
+            <mat-list-item>
+                
+                <button class="menu-item"  mat-flat-button>
+                    <a href="https://github.com/Chaitanyaprasad60/myBlogPage/tree/master" target="_blank" style="color:white"><mat-icon>code</mat-icon></a>
+                    
+                    
+                </button>     
+            </mat-list-item>
+        </mat-list>
+
+
+
+
+    </mat-drawer>
+    <mat-drawer-content>  
+        
+        <router-outlet></router-outlet>
+    </mat-drawer-content>  
+
+</mat-drawer-container>
